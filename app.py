@@ -10,6 +10,10 @@ import pandas as pd
 import FinanceDataReader as fdr
 import matplotlib.pyplot as plt
 import koreanize_matplotlib
+import os
+
+MY_NAME = os.getenv('MY_NAME')
+st.header(MY_NAME)
 
 def get_krx_company_list() -> pd.DataFrame:
     try:
@@ -56,7 +60,7 @@ confirm_btn = st.sidebar.button('조회하기') # 클릭하면 True
 
 # --- 메인 로직 ---
 if confirm_btn:
-    if not company_name: # '' 
+    if not company_name: # '' 이면
         st.warning("조회할 회사 이름을 입력하세요.")
     else:
         try:
