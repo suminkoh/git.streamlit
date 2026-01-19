@@ -4,6 +4,8 @@
 # 간단한 정규식 사용 가능
 *.txt
 # *은 모든 파일 # txt 파일 다 제외
+!requirements.txt
+# txt 파일은 다 제외할 건데, requirments 파일은 빼고.
 
 # 폴더는 폴더명/ 로 작성
 
